@@ -1,0 +1,995 @@
+/* Loader */
+
+.loader{
+    position:fixed;
+    inset:0;
+    background:#050505;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    z-index:999999;
+    transition:1s;
+}
+
+.loader.hide{
+    opacity:0;
+    visibility:hidden;
+}
+
+.loader h1{
+    color:#fff;
+    font-size:45px;
+    letter-spacing:10px;
+    animation:loaderText 2s infinite;
+}
+
+.loader span{
+    width:220px;
+    height:4px;
+    background:#222;
+    margin-top:20px;
+    border-radius:50px;
+    overflow:hidden;
+}
+
+.loader span::before{
+    content:"";
+    display:block;
+    width:40%;
+    height:100%;
+    background:#fff;
+    animation:loading 2s infinite;
+}
+
+@keyframes loading{
+
+    0%{
+        transform:translateX(-120%);
+    }
+
+    100%{
+        transform:translateX(350%);
+    }
+
+}
+
+@keyframes loaderText{
+
+    50%{
+
+        letter-spacing:18px;
+
+    }
+
+}
+
+
+/* HEADER */
+
+header{
+
+    animation:headerDown .8s ease;
+
+}
+
+@keyframes headerDown{
+
+    from{
+
+        opacity:0;
+        transform:translateY(-100px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* NAV LINKS */
+
+nav a{
+
+    position:relative;
+    overflow:hidden;
+
+}
+
+nav a::before{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:0;
+
+    left:-100%;
+
+    width:100%;
+
+    height:2px;
+
+    background:#ddd;
+
+    transition:.5s;
+
+}
+
+nav a:hover::before{
+
+    left:0;
+
+}
+
+nav a{
+
+    transition:.35s;
+
+}
+
+nav a:hover{
+
+    letter-spacing:1px;
+
+}
+
+
+/* LOGO */
+
+.logo{
+
+    transition:.5s;
+
+}
+
+.logo:hover{
+
+    transform:scale(1.08) rotate(-2deg);
+
+}
+
+
+/* HERO */
+
+.hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+/* Moving Overlay */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at 20% 30%,
+    rgba(255,255,255,.05),
+    transparent 30%),
+
+    radial-gradient(circle at 80% 60%,
+    rgba(255,255,255,.04),
+    transparent 30%);
+/* 
+    animation:moveLight 12s linear infinite; */
+
+}
+
+@keyframes moveLight{
+
+    50%{
+
+        transform:translateX(50px)
+        translateY(-30px);
+
+    }
+
+}
+
+
+/* HERO TITLE */
+
+.hero-content h1{
+
+    opacity:0;
+
+    animation:titleReveal 1s forwards;
+
+}
+
+.hero-content p{
+
+    opacity:0;
+
+    animation:titleReveal 1s .3s forwards;
+
+}
+
+.hero-content input{
+
+    opacity:0;
+
+    animation:titleReveal 1s .6s forwards;
+
+}
+
+.hero-content button{
+
+    opacity:0;
+
+    animation:titleReveal 1s .9s forwards;
+
+}
+
+@keyframes titleReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(70px)
+        scale(.9);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0)
+        scale(1);
+
+    }
+
+}
+
+
+/* HERO TITLE GLOW */
+
+.hero h1{
+
+    transition:.5s;
+
+}
+
+.hero h1:hover{
+
+    text-shadow:
+
+    0 0 15px #fff,
+
+    0 0 35px rgba(255,255,255,.5),
+
+    0 0 70px rgba(255,255,255,.2);
+
+}
+
+
+/* BUTTON */
+
+.btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-50%;
+
+    left:-150%;
+
+    width:70%;
+
+    height:220%;
+
+    background:
+
+    rgba(255,255,255,.35);
+
+    transform:rotate(25deg);
+
+    transition:1s;
+
+}
+
+.btn:hover::before{
+
+    left:180%;
+
+}
+
+.btn:hover{
+
+    transform:
+
+    translateY(-6px)
+
+    scale(1.03);
+
+}
+
+
+/* SEARCH */
+
+#searchCar{
+
+    transition:.45s;
+
+}
+
+#searchCar:focus{
+
+    transform:scale(1.04);
+
+}
+
+
+/* Mouse Spotlight */
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:280px;
+
+    height:280px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(circle,
+
+    rgba(255,255,255,.08),
+
+    transparent 70%);
+
+    pointer-events:none;
+
+    left:var(--x);
+
+    top:var(--y);
+
+    transform:translate(-50%,-50%);
+
+    z-index:999;
+
+}
+/* ===========================
+   PREMIUM 3D CAR CARDS
+=========================== */
+
+.card{
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform .25s ease;
+    overflow: hidden;
+    will-change: transform;
+}
+
+.card img{
+    transition:.6s;
+}
+
+.card:hover img{
+    transform:scale(1.12);
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+    radial-gradient(circle at var(--mx) var(--my),
+    rgba(255,255,255,.25),
+    transparent 45%);
+    opacity:0;
+    transition:.3s;
+    pointer-events:none;
+}
+
+.card:hover::before{
+    opacity:1;
+}
+
+.card::after{
+    content:"";
+    position:absolute;
+    top:-120%;
+    left:-80%;
+    width:60%;
+    height:300%;
+    background:rgba(255,255,255,.18);
+    transform:rotate(25deg);
+    transition:1s;
+}
+
+.card:hover::after{
+    left:170%;
+}
+
+.card button{
+    transition:.4s;
+}
+
+.card:hover button{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(255,255,255,.18);
+}
+/*====================================
+        SERVICES
+====================================*/
+
+.service-card{
+    position:relative;
+    overflow:hidden;
+    transition:
+    transform .45s cubic-bezier(.22,1,.36,1),
+    box-shadow .45s;
+    transform-style:preserve-3d;
+}
+
+.service-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+    135deg,
+    transparent,
+    rgba(255,255,255,.15),
+    transparent);
+    transform:translateX(-120%);
+    transition:.8s;
+}
+
+.service-card:hover::before{
+    transform:translateX(120%);
+}
+
+.service-card:hover{
+    transform:
+    translateY(-15px)
+    rotateX(8deg);
+}
+
+
+/*====================================
+        STATS
+====================================*/
+
+.stat-box{
+    transition:.4s;
+    position:relative;
+}
+
+.stat-box::after{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+
+bottom:-15px;
+
+width:0;
+
+height:4px;
+
+background:#fff;
+
+transition:.4s;
+
+transform:translateX(-50%);
+
+}
+
+.stat-box:hover{
+
+transform:translateY(-12px) scale(1.05);
+
+}
+
+.stat-box:hover::after{
+
+width:80%;
+
+}
+
+
+/*====================================
+        REVIEWS
+====================================*/
+
+.review-card{
+
+transition:.45s;
+
+overflow:hidden;
+
+position:relative;
+
+}
+
+.review-card::before{
+
+content:"";
+
+position:absolute;
+
+width:180%;
+
+height:100%;
+
+left:-180%;
+
+top:0;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.18),
+
+transparent);
+
+transition:1s;
+
+}
+
+.review-card:hover::before{
+
+left:180%;
+
+}
+
+.review-card:hover{
+
+transform:
+translateY(-15px);
+
+}
+
+
+/*====================================
+        GALLERY
+====================================*/
+
+.gallery-grid{
+
+display:grid;
+
+gap:22px;
+
+}
+
+.gallery-grid img{
+
+transition:
+
+transform .6s,
+
+filter .6s,
+
+opacity .5s;
+
+cursor:pointer;
+
+}
+
+.gallery-grid:hover img{
+
+filter:blur(3px) brightness(.55);
+
+opacity:.6;
+
+}
+
+.gallery-grid img:hover{
+
+filter:none;
+
+opacity:1;
+
+transform:
+
+scale(1.12)
+
+rotate(2deg);
+
+z-index:5;
+
+}
+
+
+/*====================================
+        BRANDS
+====================================*/
+
+.brand-container h3{
+
+transition:.35s;
+
+}
+
+.brand-container h3:hover{
+
+transform:
+
+translateY(-8px)
+
+scale(1.08);
+
+letter-spacing:2px;
+
+}
+
+
+/*====================================
+        WHY US
+====================================*/
+
+.features div{
+
+transition:.4s;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.features div::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+
+radial-gradient(circle,
+
+rgba(255,255,255,.15),
+
+transparent 70%);
+
+opacity:0;
+
+transition:.4s;
+
+}
+
+.features div:hover::before{
+
+opacity:1;
+
+}
+
+.features div:hover{
+
+transform:
+
+translateY(-12px)
+
+rotateX(8deg);
+
+}
+
+
+/*====================================
+        CONTACT FORM
+====================================*/
+
+.contact-form input,
+.contact-form textarea{
+
+transition:.4s;
+
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+
+transform:scale(1.03);
+
+box-shadow:
+
+0 0 25px rgba(255,255,255,.18);
+
+}
+
+
+/*====================================
+        TEST DRIVE
+====================================*/
+
+.test-drive button{
+
+transition:.35s;
+
+}
+
+.test-drive button:hover{
+
+transform:
+
+translateY(-6px)
+
+scale(1.03);
+
+
+}
+
+
+/*====================================
+        FOOTER LINKS
+====================================*/
+
+.footer-links a{
+
+position:relative;
+
+}
+
+.footer-links a::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-3px;
+
+width:0;
+
+height:2px;
+
+background:#fff;
+
+transition:.35s;
+
+}
+
+.footer-links a:hover::after{
+
+width:100%;
+
+}
+/*====================================
+        HERO PARALLAX
+====================================*/
+
+.hero{
+    position:relative;
+    overflow:hidden;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+    radial-gradient(circle at center,
+    rgba(255,255,255,.06),
+    transparent 70%);
+    animation:heroMove 10s ease-in-out infinite alternate;
+    pointer-events:none;
+}
+
+@keyframes heroMove{
+
+0%{
+
+transform:translate(-40px,-20px);
+
+}
+
+100%{
+
+transform:translate(40px,20px);
+
+}
+
+}
+
+
+/*====================================
+        HERO CONTENT
+====================================*/
+
+.hero-content{
+
+transition:.4s;
+
+will-change:transform;
+
+}
+
+
+/*====================================
+        PREMIUM CURSOR
+====================================*/
+
+/* .cursor{
+
+position:fixed;
+
+width:18px;
+
+height:18px;
+
+border-radius:50%;
+
+background:#fff;
+
+pointer-events:none;
+
+z-index:999999;
+
+mix-blend-mode:difference;
+
+transition:
+transform .15s,
+width .25s,
+height .25s;
+
+}
+
+.cursor-grow{
+
+width:55px;
+
+height:55px;
+
+} */
+
+
+/*====================================
+        MAGNETIC BUTTONS
+====================================*/
+
+.btn,
+.card button,
+.test-drive button,
+.contact-form button{
+
+transition:
+transform .18s;
+
+will-change:transform;
+
+}
+
+
+/*====================================
+        NAVBAR HOVER
+====================================*/
+
+nav a{
+
+transition:.35s;
+
+}
+
+nav a:hover{
+
+transform:translateY(-4px);
+
+text-shadow:
+
+0 0 15px rgba(255,255,255,.45);
+
+}
+
+
+/*====================================
+        LOGO
+====================================*/
+
+.logo{
+
+transition:.5s;
+
+}
+
+.logo:hover{
+
+transform:scale(1.08);
+
+filter:drop-shadow(0 0 15px rgba(255,255,255,.35));
+
+}
+
+
+/*====================================
+        HERO BUTTON
+====================================*/
+
+.btn{
+
+overflow:hidden;
+
+position:relative;
+
+}
+
+.btn::before{
+
+content:"";
+
+position:absolute;
+
+top:-100%;
+
+left:-70%;
+
+width:60%;
+
+height:300%;
+
+background:rgba(255,255,255,.25);
+
+transform:rotate(25deg);
+
+transition:.8s;
+
+}
+
+.btn:hover::before{
+
+left:180%;
+
+}
+
+
+/*====================================
+        SEARCH
+====================================*/
+
+#searchCar{
+
+transition:.35s;
+
+}
+
+#searchCar:focus{
+
+transform:scale(1.04);
+
+box-shadow:
+
+0 0 25px rgba(255,255,255,.15);
+
+}

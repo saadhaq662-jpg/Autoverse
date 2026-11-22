@@ -1,0 +1,886 @@
+/* ===========================================
+            AUTOVERSE LIGHT THEME
+=========================================== */
+
+body.light-theme{
+
+    background:#bdbcbc;
+    color:#000000;
+
+}
+
+/* ================= HEADER ================= */
+
+body.light-theme header{
+
+    background:#fffdfd;
+
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid #505050;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+/* LOGO */
+
+body.light-theme .logo{
+
+    background:linear-gradient(90deg,#fffdfd,#ffffff);
+
+    -webkit-background-clip:text;
+
+    background-clip:text;
+
+    color:transparent;
+
+    text-shadow:none;
+
+}
+
+body.light-theme .logo::after{
+
+    background:linear-gradient(90deg,transparent,#666,transparent);
+
+}
+
+/* SVG */
+
+body.light-theme svg{
+
+    filter:drop-shadow(0 0 8px rgba(0,0,0,.15));
+
+}
+
+body.light-theme svg path{
+
+    stroke:#ffffff;
+
+}
+
+body.light-theme svg circle{
+
+    fill:#ffffff;
+
+}
+
+/* NAVBAR */
+
+body.light-theme nav a{
+
+    color:#c9c7c7;
+
+}
+
+body.light-theme nav a:hover{
+
+    color:#ffffff;
+
+}
+
+body.light-theme nav a::after{
+
+    background:#ffffff;
+
+    box-shadow:none;
+
+}
+
+body.light-theme nav a.active{
+
+    color:#c9c7c7;
+
+}
+body.light-theme nav a.active:hover{
+    color: #ffffff;
+}
+
+/* MENU */
+
+body.light-theme .menu-toggle{
+
+    color:#222;
+
+}
+
+/* ================= HERO ================= */
+
+body.light-theme .hero{
+
+    background:
+
+    linear-gradient(
+
+     rgba(0,0,0,.70),
+
+    rgba(0,0,0,.75)
+
+    ),
+
+    url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1800&q=80");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+/* =======================
+    MOBILE RESPONSIVE
+==========================*/
+
+@media (max-width:768px){
+
+body.light-theme .hero{
+
+    width:100%;
+    min-height:100vh;
+
+    background-image:url("/ChatGPT\ Image\ Aug\ 7\,\ 2026\,\ 02_16_59\ AM.png");
+    background-size:cover;
+    background-position: center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    object-fit:cover;
+    object-position:center;
+}
+
+Dark Overlay
+
+body.light-theme.hero::before{
+
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+}
+
+Content
+
+body.light-theme.hero-content{
+
+    position:relative;
+    z-index:2;
+
+    width:90%;
+
+    text-align:center;
+
+}
+
+body.light-theme.hero h1{
+
+    font-size:42px;
+
+    line-height:1.1;
+
+}
+
+body.light-theme.hero p{
+
+    font-size:17px;
+
+    margin:15px 0 30px;
+
+}
+
+body.light-theme #searchCar{
+
+    width:100%;
+
+    height:55px;
+
+    border-radius:40px;
+
+}
+
+body.light-theme.btn{
+
+    width:100%;
+
+    height:58px;
+
+    border-radius:40px;
+
+}
+
+}
+/* HERO TEXT */
+
+body.light-theme .hero h1{
+
+    color:#ffffff;
+
+    text-shadow:0 3px 12px rgba(206, 204, 204, 0.6);
+
+}
+
+body.light-theme .hero p{
+
+    color:#ffffff;
+
+}
+
+/* BUTTON */
+
+body.light-theme .btn{
+
+    background:#fffbfb;
+
+    color:#000000;
+
+
+}
+
+body.light-theme .btn:hover{
+
+    background:#6d6b6b;
+
+    transform:translateY(-4px);
+
+}
+
+/* SEARCH BAR */
+
+body.light-theme #searchCar{
+
+    background:#1a1818;
+
+    color:#b3b1b1;
+
+    border:2px solid #252424;
+
+}
+
+body.light-theme #searchCar::placeholder{
+
+    color:#6d6b6b;
+
+}
+
+body.light-theme #searchCar:focus{
+
+    border-color:#d1cfcf;
+
+    box-shadow:0 0 15px rgba(0, 0, 0, 0.801);
+
+}
+
+/* SECTION TITLES */
+
+body.light-theme h2{
+
+    color:#000000;
+
+}
+
+body.light-theme h2::after{
+
+    background:#616060;
+
+}
+
+/* ===========================================
+        CARS SECTION
+=========================================== */
+
+body.light-theme .cars{
+
+    background:#d4d4d6;
+
+}
+
+body.light-theme .card{
+
+    background:#000000;
+
+    border:1px solid #e9e3e3;
+
+    box-shadow:0 10px 25px rgba(0, 0, 0, 0.726);
+
+}
+
+body.light-theme .card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 18px 40px rgba(12, 12, 12, 0.945);
+
+}
+
+body.light-theme .card h3{
+
+    color:#f0f0f0;
+
+}
+
+body.light-theme .card p{
+
+    color:#f0f0f0;
+
+}
+
+body.light-theme .card button{
+
+    background:#faf9f9;
+
+    color:#0a0a0a;
+
+}
+
+body.light-theme .card button:hover{
+
+    background:#161616;
+
+}
+
+/* =========================================
+        CAR DETAILES
+============================================ */
+
+body.light-theme #bmw{
+    
+    background: #222121;
+}
+body.light-theme #mercedes{
+    
+    background: #222121;
+}
+body.light-theme #lambo{
+    
+    background: #222121;
+}
+
+
+
+/* ===========================================
+        BRANDS
+=========================================== */
+
+body.light-theme .brands{
+
+    background:#faf9f9;
+
+}
+
+body.light-theme .brand-container h3{
+
+    background:#181818;
+
+    color:#fafafa;
+
+    border:1px solid #fffbfb;
+
+}
+
+body.light-theme .brand-container h3:hover{
+
+    background:#adadad;
+
+    color:#0f0f0f;
+
+}
+
+/* ===========================================
+        STATS
+=========================================== */
+
+body.light-theme .stats{
+
+    background:#fffefe;
+
+}
+
+body.light-theme .stat-box{
+
+    background:#181818;
+
+    border:1px solid #ddd;
+
+    box-shadow:0 8px 20px rgba(0, 0, 0, 0.932);
+
+}
+
+body.light-theme .stat-box:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+
+body.light-theme .stat-box h2{
+
+    color:#ffffff;
+
+}
+
+body.light-theme .stat-box p{
+
+    color:#ece8e8;
+
+}
+
+/* ===========================================
+        SERVICES
+=========================================== */
+
+body.light-theme #services{
+
+    background:#f5f3f3;
+
+}
+body.light-theme .service-card h2{
+
+    color:#181717;
+
+}
+body.light-theme .service-card{
+
+    background:#141414;
+
+    border:1px solid #a1a1a1;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+body.light-theme .service-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 18px 35px rgba(0, 0, 0, 0.925);
+
+}
+
+body.light-theme .service-card h3{
+
+    color:#ffffff;
+
+}
+
+
+body.light-theme #services h2{
+
+    color:#111;
+
+}
+
+
+
+body.light-theme .service-card p{
+
+    color:#f7f4f4;
+
+}
+
+/* ===========================================
+      WHY CHOOSE US
+=========================================== */
+
+body.light-theme .why-us{
+
+    background:#f5f5f5;
+
+}
+
+body.light-theme .why-us h2{
+
+    color:#111;
+
+}
+
+body.light-theme .features div{
+
+    background:#080808;
+
+    border:1px solid #bbbbbb;
+
+    box-shadow:0 10px 20px rgba(0, 0, 0, 0.747);
+
+    transition:.3s;
+
+}
+
+body.light-theme .features div h3{
+
+    color:#fffdfd;
+
+}
+
+body.light-theme .features div p{
+
+    color:#fffdfd;
+
+}
+
+body.light-theme .features div:hover{
+
+    background:#adadad;
+
+    transform:translateY(-10px);
+
+    box-shadow:0 15px 30px rgba(0, 0, 0, 0.76);
+
+}
+
+body.light-theme .features div:hover h3{
+
+    color:#000000;
+
+}
+
+body.light-theme .features div:hover p{
+
+    color:#000000;
+
+}
+/* ===========================================
+      TEST DRIVE
+=========================================== */
+
+body.light-theme .test-drive{
+
+    background:#d8d6d6;
+
+}
+
+body.light-theme .test-drive input,
+body.light-theme .test-drive :placeholder,
+body.light-theme .test-drive select{
+
+    background:#ffdcdc;
+
+    color:#fffdfd;
+
+    border:1px solid #a5a4a4;
+
+}
+
+body.light-theme .test-drive button{
+
+    background:#faf9f9;
+
+    color:oklab(0% 0 0);
+
+}
+
+body.light-theme .test-drive button:hover{
+
+    background:#706e6e;
+
+}
+
+/* ===========================================
+            REVIEWS
+=========================================== */
+
+body.light-theme .reviews{
+
+    background:#fefeff;
+
+}
+
+body.light-theme .review-card{
+
+    background:#131313;
+
+    border:1px solid #c0bebe;
+
+    box-shadow:0 10px 25px rgba(0, 0, 0, 0.466);
+
+}
+
+body.light-theme .review-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 35px rgba(0, 0, 0, 0.822);
+
+    background: rgb(158, 158, 158);
+
+
+}
+
+
+body.light-theme .review-card span{
+
+    color:#fffdfd;
+
+}
+body.light-theme .review-card span:hover{
+
+    color:#020202;
+
+}
+
+body.light-theme .review-card p{
+
+    color:#fcf9f9;
+
+}
+
+body.light-theme .review-card p:hover{
+
+    color:#000000;
+
+}
+/* ===========================================
+            GALLERY
+=========================================== */
+
+body.light-theme .gallery{
+
+    background:#f1f1f1;
+
+}
+
+body.light-theme .gallery-grid img{
+
+    border:2px solid rgb(58, 55, 55)6c6;
+
+    box-shadow:0 10px 25px rgba(0, 0, 0, 0.589);
+
+}
+
+body.light-theme .gallery-grid img:hover{
+
+    transform:scale(1.09);
+
+    box-shadow:0 20px 40px rgba(0, 0, 0, 0.945);
+
+}
+
+/* ===========================================
+            CONTACT
+=========================================== */
+
+body.light-theme #contact{
+
+    background:#fdfdfd;
+
+}
+body.light-theme #contact h2{
+
+    color: #000000;
+}
+
+body.light-theme .contact-form,
+body.light-theme .contact-info{
+
+    background:#252525;
+
+    border:1px solid #747272;
+
+    box-shadow:0 10px 25px rgba(0, 0, 0, 0.514);
+
+}
+
+body.light-theme .contact-form input,
+body.light-theme .contact-form textarea{
+
+    background:#dad8d8;
+
+    color:#020202;
+
+    border:1px solid #ebe8e8;
+
+}
+
+body.light-theme .contact-form input::placeholder,
+body.light-theme .contact-form textarea::placeholder{
+
+    color:#666666;
+
+}
+
+body.light-theme .contact-form button{
+
+    background:#f7f6f6;
+
+    color:#070707;
+
+}
+
+body.light-theme .contact-form button:hover{
+
+    background:#474646;
+
+    color: rgb(255, 255, 255);
+
+}
+
+
+/* ===========================================
+            FOOTER
+=========================================== */
+
+body.light-theme .footer{
+
+    background:#636161;
+
+    border-top:1px solid #ddd;
+
+}
+
+body.light-theme .footer-title{
+
+    color:#000000;
+
+}
+
+body.light-theme .footer-links a{
+
+    color:#000000;
+
+}
+
+body.light-theme .footer-links a:hover{
+
+    color:#fffefe;
+
+}
+
+body.light-theme .footer-language{
+
+    background:#fffefe;
+
+    color:#111;
+
+    border:1px solid #dad9d9;
+    
+    border-radius: 30px;
+
+}
+
+body.light-theme .footer-brand{
+
+    color:#000000;
+
+}
+
+body.light-theme .footer-note{
+
+    color:#000000;
+
+}
+
+/* ===========================================
+            WHATSAPP
+=========================================== */
+
+body.light-theme .whatsapp-btn{
+
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+
+}
+
+/* ===========================================
+            CAR DETAILS
+=========================================== */
+
+body.light-theme .car-details{
+
+    background:#ffffff;
+
+    color:#111;
+
+    border:1px solid #ccc;
+
+}
+
+/* ===========================================
+            SCROLLBAR
+=========================================== */
+
+body.light-theme::-webkit-scrollbar{
+
+    width:11px;
+
+}
+
+body.light-theme::-webkit-scrollbar-track{
+
+    background:#afaeae;
+
+}
+
+body.light-theme::-webkit-scrollbar-thumb{
+
+    background:#252525;
+
+    border-radius:20px;
+
+}
+
+body.light-theme::-webkit-scrollbar-thumb:hover{
+
+    background:#807f7f;
+
+}
+
+/* ===========================================
+            TEXT SELECTION
+=========================================== */
+
+body.light-theme::selection{
+
+    background:#111;
+
+    color:#fff;
+
+}
+
+/* ===========================================
+            RESPONSIVE
+=========================================== */
+
+@media(max-width:768px){
+
+body.light-theme header{
+
+padding:15px 6%;
+
+}
+
+body.light-theme .hero h1{
+
+font-size:42px;
+
+}
+
+body.light-theme .hero p{
+
+font-size:18px;
+
+}
+
+body.light-theme .card,
+body.light-theme .service-card,
+body.light-theme .review-card{
+
+width:100%;
+
+}
+
+}
+
+body.light-theme #themeText{
+
+    color: whitesmoke;
+}
+/* ===========================================
+        PREMIUM LIGHT THEME END
+=========================================== */
